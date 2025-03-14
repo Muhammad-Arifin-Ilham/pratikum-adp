@@ -1,0 +1,62 @@
+print()
+print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-")
+print("                     DAFTAR PAKET MAKANAN                      ")
+print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-")
+print("Paket                  Isi                           Harga")
+print("a          Nasi goreng , Es teh                    Rp.30.000     ")
+print("b          Ayam bakar , Nasi putih ,Es jeruk       Rp.50.000     ")
+print("c          Ayam geprek , Nasi putih ,Es teh        Rp.45.000     ")
+print("d          Ikan bakar , Nasi putih ,Es Jeruk       Rp.60.000     ")
+print("e          Mie goreng , Es teh                     Rp.25.000     ")
+print("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-")
+print()
+print()
+print("*** Masukkan Detail Pemesanan Anda ***")
+nama=input("Nama lengkap                     :")
+no=input("No telepon                       :")
+alamat=input("Alamat lengkap                   :")
+x=(input("Paket yang ingin dipesan         :"))
+y=int(input("Jumlah paket yang ingin dipesan  :"))
+if x=="a" :
+ p=("Nasi goreng , Es teh")
+ harga=30000
+elif x=="b" :
+ p=("Ayam bakar , Nasi putih , Es jeruk")
+ harga=50000
+elif x=="c" :
+ p=("Ayam geprek , Nasi putih , Es teh")
+ harga=45000
+elif x=="d" :
+ p=("Ikan bakar , Nasi putih , Es Jeruk")
+ harga=60000
+else :
+ p=("Mie goreng , Es teh ")
+ harga=25000
+biaya_makanan=harga*y
+pajak=int(biaya_makanan*(10/100))
+if biaya_makanan <150000 :
+ biaya_pengiriman=25000
+else :
+ biaya_pengiriman=0
+total=biaya_makanan+pajak+biaya_pengiriman
+print()
+print()
+print("*****************************************************************")
+print("                         STRUK PEMESANAN                         ")
+print("*****************************************************************")
+print("Nama              :",nama)
+print("No telepon        :",no)
+print("Alamat Pengiriman :",alamat)
+print("Detail Pesanan    : Paket",x,"{",p,"}")
+print("Jumlah Pesanan    :",y)
+print("Total harga       : Rp",biaya_makanan)
+print("Pajak (10%)       : Rp",pajak)
+print("Biaya Pengiriman  : Rp",biaya_pengiriman)
+print("Total Akhir       : Rp",total)
+print("****************************************************************")
+print()
+
+
+
+
+
