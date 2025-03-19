@@ -1,0 +1,15 @@
+print("Misalkan N(t) adalah variabel acak Poisson dengan parameter lamda_t>0 sehingga :")
+print("                    P(N(t)=n) = e^(-lamda_t) . (lamda_t)^n/n!                  " )
+print()
+print("untuk menghitung P(N(t)=n) inputkan nilai terlebih dahulu                    ")
+m=int(input("Inputkan nilai parameter         : "))
+lambda_t=float(input("Inputkan nilai lambda t          : "))
+e=2.71828
+nfaktorial=1
+for n in range (0,m+1):
+     if n==0:
+      N=(e**(-lambda_t))*((lambda_t)**n)/1
+     else :
+      nfaktorial=nfaktorial*n
+      N=(e**(-lambda_t))*((lambda_t)**n)/nfaktorial
+     print(f"Jadi , Nilai P(N(t) = {n}) adalah  :",{N})
