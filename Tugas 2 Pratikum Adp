@@ -6,7 +6,7 @@ m=int(input("Inputkan nilai parameter  = "))
 lambda_t=float(input("Inputkan nilai lambda t   = "))
 e=2.71828
 nfaktorial=1
-for n in range (m+1):
+for n in range (0,m+1):
      N=(e**(-lambda_t))*((lambda_t)**n)/nfaktorial
      nfaktorial=nfaktorial*(n+1)
      print(f"Nilai P(N(t) = {n}) adalah  =",{N})
