@@ -90,4 +90,6 @@ for j in range (11,101) :
        print(j,end="  ")
      if j%10==0 :
         print()
+print()
+print("Terima kasih telah melakukan reservasi ! ")
     
