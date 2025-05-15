@@ -1,0 +1,65 @@
+nomor_mahasiswa=[]
+nama_mahasiswa=[]
+nilai_mahasiswa =[]
+while True :
+    print("===================================")
+    print("Manajemen nilai mahasiswa sederhana")
+    print("===================================")
+    print("[1] tambah data")
+    print("[2] hapus data")
+    print("[3] tampilkan data")
+    print("[4] keluar")
+    print("===================================")
+    print()
+    pilihan =int(input("Inputkan pilihan : "))
+    print("-----------------------------------")
+    if pilihan == 1 :
+        no = int(input("nomor mahasiswa : "))
+        nama = (input("nama mahasiswa : "))
+        nilai = float(input("nilai mahasiswa : "))
+        nomor_mahasiswa.append(no)
+        nama_mahasiswa.append(nama)
+        nilai_mahasiswa.append(nilai)
+        print("data berhasil ditambahkan")
+        print()
+    elif pilihan == 2:
+        no = int(input("masukan nomor mahasiswa yang ingin dihapus : "))
+        if no in nomor_mahasiswa :
+            index=nomor_mahasiswa.index(no)
+            nomor_mahasiswa.pop(index)
+            nama_mahasiswa.pop(index)
+            nilai_mahasiswa.pop(index)
+            print("data berhasil dihapuskan")
+        else :
+            print("Nomor mahasiswa tidak valid ")
+        print()
+    elif pilihan == 3 :
+        print("Data Mahasiswa")
+        print()
+        if len(nomor_mahasiswa) == 0:
+            print("Belum ada data.\n")
+        else:
+            gabungan = []
+            for i in range(len(nomor_mahasiswa)):
+                gabungan.append((nomor_mahasiswa[i], nama_mahasiswa[i], nilai_mahasiswa[i]))
+            n = len(gabungan)
+            batas = n
+            while batas > 1 :
+                for i in range(batas-1) :
+                    if gabungan[i][2] < gabungan[i+1][2]:
+                        x = gabungan[i]
+                        gabungan[i] = gabungan[i+1]
+                        gabungan[i+1] = x
+                batas -=1
+            print("No Mahasiswa       Nama            Nilai")
+            print("-----------------------------------------")
+            for data in gabungan:
+                print(f"{data[0]:>7} {data[1]:>15} {data[2]:>16}")
+            print()
+    elif pilihan == 4 :
+        print("Terima kasih ")
+        break
+    else :
+        print("Pilihan tidak valid , silahkan coba lagi")
+
+
