@@ -1,0 +1,20 @@
+print("\n=== PROGRAM MENGHITUNG JARAK TITIK ===")
+print()
+n = int(input("Masukkan jumlah titik: "))
+titik = []
+for i in range(n):
+    print("\nTitik ke-", i+1)
+    x = float(input("Masukkan nilai x: "))
+    y = float(input("Masukkan nilai y: "))
+    titik.append((x, y))
+print("\nTitik:")
+for i in range(n):
+    print("  Titik", i+1, ":", titik[i])
+print("\nJarak antar titik:")
+for i in range(n):
+    for j in range(i+1, n):
+        dx = titik[j][0] - titik[i][0]
+        dy = titik[j][1] - titik[i][1]
+        jarak = (dx**2 + dy**2)**0.5
+        print("  Jarak Titik", i+1, "ke", j+1, "=", jarak)
+print("\nProgram Selesai")
