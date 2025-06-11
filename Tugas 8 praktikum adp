@@ -1,0 +1,25 @@
+import os
+import time
+from termcolor import cprint
+lebar = 25
+tinggi = 10
+pola= [0, 1, 2, 3, 2, 1]
+panjang = len(pola)
+langkah = 0
+while True:
+    os.system('cls')  
+    for i in range(tinggi):
+        geser = pola[(langkah + i) % panjang]
+        spasi = " " * (geser + 5)
+        if i < (tinggi // 2):
+            warna_latar = "on_red"
+            warna_tulisan = "red"
+        else:
+            warna_latar = "on_white"
+            warna_tulisan = "white"
+        cprint(spasi + " " * lebar, warna_tulisan, warna_latar)
+    for i in range(10):
+        cprint("||", "white", "on_white")
+    time.sleep(0.1)
+    langkah += 1
+
