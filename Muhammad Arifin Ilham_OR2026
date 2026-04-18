@@ -1,0 +1,24 @@
+n = int(input("Masukkan bilangan bulat positif : "))
+k = int(input("Masukkan batas maksimum iterasi (k): "))
+iterasi = 0
+berhasil = False
+print("\nProses Rantai Mirror:")
+while iterasi < k:
+    iterasi += 1
+    while n % 10 == 0:
+        n = n // 10
+    str_n = str(n)
+    mirror_n = int(str_n[::-1])
+    hasil = n + mirror_n
+    print("Iterasi", iterasi, ":", n, "+", mirror_n, "=", hasil)
+    str_hasil = str(hasil)
+    if str_hasil == str_hasil[::-1]:
+        print(hasil, "(palindrom)")
+        berhasil = True
+        n = hasil
+        break
+    n = hasil
+if berhasil:
+    print("Status: Berhasil mencapai palindrom.")
+else:
+    print("Status: Mencapai batas maksimum iterasi.")
